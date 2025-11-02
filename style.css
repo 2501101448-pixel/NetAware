@@ -40,7 +40,7 @@ body {
 .site-header .main-nav ul {
   list-style: none;
   gap: 10px;
-  margin: 0;
+  margin: 0 auto;
   display: flex;
   margin-right: 20px;
   font-size: 20px;
@@ -68,7 +68,15 @@ body {
   padding: 125px 30px 167px;
   position: relative;
 }
-.hero::after {
+.hero1 {
+  background: url('') center/cover no-repeat; /* replace with your image */
+  background-color: #fff;
+  color: gray;
+  text-align: center;
+  padding: 125px 30px 167px;
+  position: relative;
+}
+.hero.hero1::after {
   content: '';
   position: absolute;
   inset: 0;
@@ -340,4 +348,102 @@ body {
   .hero h1 {
     font-size: 2.5rem;
   }
+}
+
+/* page1 */
+.protect-section {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.step-card {
+  background: #f8f8f8;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+.step-card:hover {
+  transform: translateY(-5px);
+}
+.step-card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.examples {
+  text-align: center;
+  padding: 60px 20px;
+  background: #f2f5f8;
+}
+
+.example-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.example {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.example img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.back-btn {
+  text-align: center;
+  margin: 40px 0;
+}
+
+/* page 3 */
+.tips-section {
+  background: #f8f9fb;
+  padding: 50px 20px;
+  text-align: center;
+  border-radius: 15px;
+  margin-top: 50px;
+}
+
+.tips-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.tips-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.tips-section li {
+  background: white;
+  margin: 10px auto;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  text-align: left;
+  font-weight: 500;
+}
+/* page 3 */
+.intro-text {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  color: #444;
+  line-height: 1.6;
 }
