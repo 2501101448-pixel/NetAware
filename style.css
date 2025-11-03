@@ -98,7 +98,7 @@ body {
    HERO SECTION
 ================================= */
 .hero {
-  background: url('image/images.jpg') center/cover no-repeat;
+  background: url('/image/images.jpg') center/cover no-repeat;
   color: #fff;
   text-align: center;
   padding: 120px 20px;
@@ -123,7 +123,7 @@ body {
   font-weight: 700;
 }
 
-.hero h1 span {
+.hero h1 span{
   color: #FF5A5F;
 }
 
@@ -260,6 +260,118 @@ body {
   color: #555;
   max-width: 700px;
   margin: 0 auto;
+}
+/* Awareness Section */
+.awareness {
+  background-color: #f9f9f9;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.awareness h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.awareness .section-intro {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto 50px;
+}
+
+.awareness-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  justify-content: center;
+}
+
+.aware-item {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 30px 20px;
+  transition: all 0.3s ease;
+}
+
+.aware-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.aware-item img {
+  width: 80px;
+  margin-bottom: 20px;
+}
+
+.aware-item h4 {
+  color: #e74c3c;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.aware-item p {
+  color: #444;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+
+/* Tips Section */
+.tips {
+  background-color: #0b0b20;
+  color: #fff;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.tips h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.tips .section-intro {
+  font-size: 1.1rem;
+  color: #ddd;
+  max-width: 700px;
+  margin: 0 auto 50px;
+}
+
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  justify-content: center;
+}
+
+.tip-item {
+  background: #1b1b35;
+  border-radius: 16px;
+  padding: 30px 20px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.tip-item:hover {
+  background: #26264d;
+  transform: translateY(-8px);
+}
+
+.tip-item h4 {
+  color: #ff6b3d;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.tip-item p {
+  color: #ccc;
+  font-size: 0.95rem;
+  line-height: 1.6;
 }
 
 /* ===============================
@@ -495,4 +607,6 @@ body {
 
 .contact-form button:hover {
   background: #e25e2f;
+}
+
 }
