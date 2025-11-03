@@ -177,7 +177,8 @@ body {
 }
 
 .card img {
-  width: fit-content;
+  width: 100%;
+  aspect-ratio: 16 / 9;
   display: block;
   object-fit: cover;
 }
