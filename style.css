@@ -19,6 +19,7 @@ body {
   color: #222;
   background-color: #fafafa;
   line-height: 1.5;
+  cursor: default;
 }
 
 /* ===============================
