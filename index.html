@@ -10,6 +10,11 @@
     />
     <link rel="shortcut icon" href="/image/log.jpg" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
+    <style>
+      section[id] {
+        scroll-margin-top: 100px;
+      }
+    </style>
   </head>
   <body>
     <header class="site-header">
@@ -19,14 +24,14 @@
           <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#">Awareness</a></li>
+            <li><a href="#awareness">Awareness</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
-    <section class="hero">
+     <section class="hero" id="home">
       <div class="container">
         <h1>
           NetAware is your Guide to becoming a Smarter and Safer
@@ -38,7 +43,7 @@
     </section>
 
     <main class="container">
-      <section class="cards-grid">
+      <section class="cards-grid" id="awareness">
         <div class="card">
           <img src="image/data_protection.png" alt="Protect Your data" />
           <div class="card-content">
@@ -178,5 +183,33 @@
         <p>© NetAware 2025. Designed to make you smarter online.</p>
       </div>
     </footer>
+
+<!-- Back to Top Button -->
+<button id="backToTop" title="Go to top">↑</button>
+
+<script>
+  const topBtn = document.getElementById("backToTop");
+
+  // 🔥 TEST MODE: Always show button
+  topBtn.style.display = "block";
+
+  // Normal scroll behavior (still included)
+  window.onscroll = function () {
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+      topBtn.style.display = "block";
+    } else {
+      topBtn.style.display = "none";
+    }
+  };
+
+  topBtn.addEventListener("click", function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>
+</body>
+</html>
+
+</body>
+</html>
   </body>
 </html>
