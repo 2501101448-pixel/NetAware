@@ -1,0 +1,105 @@
+<!--?xml version="1.0" encoding="utf-8"?-->
+<!-- phishing-slide.svg
+     1200x400 flat-style SVG recreation of the provided image.
+     You can edit colors, fonts, or sizes as needed.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="1200" height="400" role="img" aria-label="How to recognize and avoid phishing scams slide">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" x2="1">
+      <stop offset="0" stop-color="#ffffff"></stop>
+      <stop offset="1" stop-color="#fbfeff"></stop>
+    </linearGradient>
+    <linearGradient id="phoneGrad" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#e9f7ff"></stop>
+      <stop offset="1" stop-color="#d8f0ff"></stop>
+    </linearGradient>
+    <filter id="softShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="b"></feGaussianBlur>
+      <feOffset dx="0" dy="6" result="o"></feOffset>
+      <feMerge>
+        <feMergeNode in="o"></feMergeNode>
+        <feMergeNode in="SourceGraphic"></feMergeNode>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- background -->
+  <rect width="1200" height="400" fill="url(#bgGrad)"></rect>
+
+  <!-- LEFT: circular illustration area -->
+  <g transform="translate(80,30)">
+    <circle cx="160" cy="160" r="160" fill="#eaf8ff"></circle>
+    <!-- apply slight shadow to the inner illustration -->
+    <g transform="translate(40,40)" filter="url(#softShadow)">
+      <!-- hand (simple stylized shape) -->
+      <g transform="translate(40,60)">
+        <path d="M40 160 C30 150 24 140 36 128 C48 116 90 118 130 122 C150 124 168 130 180 138 C186 142 188 150 184 156 C178 165 150 176 120 180 C92 183 62 177 40 160 Z" fill="#ffdcbf" stroke="#f0caa6" stroke-width="1"></path>
+      </g>
+
+      <!-- phone -->
+      <g transform="translate(120,12)">
+        <rect x="0" y="20" rx="18" ry="18" width="120" height="200" fill="#ffffff" stroke="#dbeffb" stroke-width="2"></rect>
+        <rect x="8" y="28" width="104" height="176" rx="10" fill="url(#phoneGrad)"></rect>
+        <!-- screen content: header bar -->
+        <rect x="16" y="36" width="88" height="14" rx="6" fill="#d7f1ff"></rect>
+        <!-- shield / lock icon -->
+        <g transform="translate(36,70)">
+          <rect x="12" y="6" width="40" height="40" rx="6" fill="#ffffff"></rect>
+          <path d="M32 6 C26 6 22 10 22 16 L22 22 L42 22 L42 16 C42 10 38 6 32 6 Z" fill="#66c0ff" stroke="#2a6ea9" stroke-width="1"></path>
+          <rect x="28" y="22" width="8" height="8" rx="1.5" fill="#2a6ea9"></rect>
+        </g>
+        <!-- fake notification / suspicious link -->
+        <g transform="translate(16,118)">
+          <rect x="0" y="0" width="88" height="28" rx="6" fill="#fff7f7" stroke="#ffdede"></rect>
+          <text x="8" y="20" font-family="Segoe UI, Roboto, Arial" font-size="10" fill="#c43a3a">http://secure-login.example</text>
+        </g>
+
+        <!-- check / verify marker -->
+        <circle cx="96" cy="206" r="8" fill="#e6fbf8" stroke="#88e0c6"></circle>
+        <path d="M92 206 L95 210 L104 200" stroke="#1a9c73" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+      </g>
+
+      <!-- floating icons around phone -->
+      <g transform="translate(10,10)">
+        <!-- message bubble -->
+        <rect x="0" y="12" rx="10" width="62" height="40" fill="#ffffff" stroke="#e3f4ff"></rect>
+        <circle cx="18" cy="34" r="3" fill="#8fbfe6"></circle>
+        <circle cx="30" cy="34" r="3" fill="#8fbfe6"></circle>
+        <circle cx="42" cy="34" r="3" fill="#8fbfe6"></circle>
+        <!-- small photo icon -->
+        <rect x="220" y="20" rx="6" width="44" height="34" fill="#ffffff" stroke="#e3f4ff"></rect>
+        <path d="M230 32 L242 22 L254 34 L230 32" fill="#d0eefc"></path>
+        <!-- coin / reward icons -->
+        <circle cx="270" cy="140" r="16" fill="#fff7e6" stroke="#ffe3a8"></circle>
+        <text x="266" y="146" font-family="Segoe UI, Roboto" font-size="14" fill="#d08f00">$</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- RIGHT: Title text -->
+  <g transform="translate(360,40)">
+    <!-- small logo placeholder top-left -->
+    <g transform="translate(20,0)">
+      <rect x="0" y="0" width="56" height="36" rx="6" fill="#e6fbff" stroke="#bfeffd"></rect>
+      <path d="M8 18 L24 6 L40 18 L24 30 Z" fill="#68e1fd"></path>
+    </g>
+
+    <!-- Main heading -->
+    <text x="140" y="70" font-family="Segoe UI, Roboto, Arial" font-size="34" font-weight="700" fill="#21324a">How to Recognize</text>
+    <text x="140" y="115" font-family="Segoe UI, Roboto, Arial" font-size="34" font-weight="700" fill="#21324a">and Avoid</text>
+
+    <!-- Subheading with emphasis -->
+    <text x="140" y="180" font-family="Segoe UI, Roboto, Arial" font-size="36" font-weight="800" fill="#2a9cf0">PHISHING</text>
+    <text x="330" y="180" font-family="Segoe UI, Roboto, Arial" font-size="36" font-weight="800" fill="#2a9cf0">SCAMS</text>
+
+    <!-- optional small descriptive line -->
+    <text x="140" y="220" font-family="Segoe UI, Roboto, Arial" font-size="14" fill="#556b91">
+      Learn to spot suspicious links, check senders, and protect your accounts.
+    </text>
+  </g>
+
+  <!-- bottom-right small note -->
+  <text x="980" y="380" font-family="Segoe UI, Roboto, Arial" font-size="11" fill="#7b8899" text-anchor="end">
+    Illustration — original SVG
+  </text>
+</svg>
