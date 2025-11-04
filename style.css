@@ -562,6 +562,26 @@ body {
 }
 
 /* ===============================
+   BACK TO TOP BUTTON
+================================= */
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 999;
+  background-color: #FF5A5F;
+  color: #fff;
+  border: none;
+  padding: 14px 18px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  display: none; /* hidden by default, shown*/
+}
+
+/* ===============================
    RESPONSIVE DESIGN
 ================================= */
 @media (max-width: 768px) {
@@ -607,4 +627,5 @@ body {
 
 .contact-form button:hover {
   background: #e25e2f;
+}
 }
