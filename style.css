@@ -153,6 +153,69 @@ body {
   transform: translateY(-2px);
 }
 
+/* Hero Search Bar */
+.hero-search {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+  width: 100%;
+}
+
+.hero-search input {
+  width: 70%;
+  max-width: 500px;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px 0 0 6px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.hero-search button {
+  padding: 12px 18px;
+  border: 1px solid #ccc;
+  border-left: none;
+  border-radius: 0 6px 6px 0;
+  background-color: #e64e50;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.hero-search button:hover {
+  background-color:#e64e50;
+}
+
+.search-suggestions {
+  position: absolute;
+  top: 100%;
+  left: 25%;
+  right: 25%;
+  color: #e64e50;
+  background: white;
+  border: 125px;
+  border-top: none;
+  max-height: 200px;
+  overflow-y: auto;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: none;
+  z-index: 1000;
+   border-radius: 5px;
+}
+
+.search-suggestions li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.search-suggestions li:hover {
+  background-color: #f2f2f2;
+}
+
+
 /* ===============================
    CARDS GRID
 ================================= */
@@ -220,7 +283,7 @@ body {
 ================================= */
 .about {
   background-color: #f9f9f9;
-  padding: 80px 20px;
+  padding: 60px 20px;
   text-align: center;
 }
 
@@ -255,7 +318,7 @@ body {
   margin-bottom: 8px;
 }
 
-.about-item p {
+.about-item p, .about-container > p {
   font-size: 1rem;
   color: #555;
   max-width: 700px;
@@ -508,6 +571,76 @@ body {
   text-decoration: underline;
 }
 
+/* ==============================
+   FOOTER STYLES
+============================== */
+.site-footer {
+  background-color: #f8f9fa; /* Light background */
+  padding: 40px 20px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  color: #555;
+  position: relative;
+}
+
+.site-footer .footer-logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #ff5c5c; /* Match your brand color */
+  margin-bottom: 15px;
+}
+
+.site-footer .footer-social {
+  margin-bottom: 15px;
+}
+
+.site-footer .footer-social a {
+  display: inline-block;
+  margin: 0 10px;
+  color: #555;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.site-footer .footer-social a i {
+  margin-right: 6px;
+}
+
+.site-footer .footer-social a:hover {
+  color: #ff5c5c; /* Hover effect */
+  transform: translateY(-3px);
+}
+
+.site-footer p {
+  font-size: 0.9rem;
+  color: #888;
+  margin-top: 5px;
+}
+
+/* Back to Top Button Adjustments */
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #ff5c5c;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  z-index: 1000;
+}
+
+#backToTop:hover {
+  background-color: #ff3b3b;
+  transform: translateY(-3px);
+}
+
 /* ===============================
    PAGE SECTIONS 
 ================================= */
@@ -584,7 +717,7 @@ body {
 /* ===============================
    RESPONSIVE DESIGN
 ================================= */
-@media (max-width: 768px) {
+@media (max-width: 640px) {
   .hero h1 {
     font-size: 2rem;
   }

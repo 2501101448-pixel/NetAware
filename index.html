@@ -8,6 +8,9 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
       rel="stylesheet"
     />
+     <link
+     rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
     <link rel="shortcut icon" href="/image/log.jpg" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
     <style>
@@ -23,23 +26,27 @@
         <nav class="main-nav">
           <ul>
             <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#tips">Tips</a></li>
-            <li><a href="#awareness">Awareness</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="aware&tips.html#tips">Tips</a></li>
+            <li><a href="aware&tips.html#awareness">Awareness</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
-     <section class="hero" id="home">
+     <!-- Hero Section with Search -->
+    <section class="hero">
       <div class="container">
-        <h1>
-          NetAware is your Guide to becoming a Smarter and Safer
-          <span>Digital Citizen</span>
-        </h1>
+        <h1>NetAware is your Guide to becoming a <span>Smarter & Safer Digital Citizen</span></h1>
         <p>Think Smart. Stay Safe Online.</p>
-        <a class="btn btn-primary" href="#page">Get Started</a>
+
+        <!-- Search Bar -->
+        <div class="hero-search">
+          <input type="text" id="heroSearchInput" placeholder="Search tips or awareness topics..." />
+          <button id="heroSearchBtn"><i class="fas fa-search"></i></button>
+          <ul id="heroSearchSuggestions" class="search-suggestions"></ul>
+        </div>
       </div>
     </section>
 
@@ -78,111 +85,6 @@
       </section>
     </main>
 
-    <!-- Awareness Section -->
-    <section class="awareness" id="awareness">
-      <div class="container">
-        <h2>Online Awareness</h2>
-        <p class="section-intro">
-          Learn how to identify online dangers and protect yourself from cyber
-          threats.
-        </p>
-        <div class="awareness-grid">
-          <div class="aware-item">
-            <img src="/image/phishing.png" alt="Phishing Scams" />
-            <h4>Phishing Scams</h4>
-            <p>
-              Be cautious of emails or messages asking for personal information.
-              Verify before you click any links.
-            </p>
-          </div>
-          <div class="aware-item">
-            <img src="/image/fake_profiles.png" alt="Fake Profiles" />
-            <h4>Fake Profiles</h4>
-            <p>
-              Always confirm who you’re connecting with online. Some fake
-              profiles are used to steal data or spread scams.
-            </p>
-          </div>
-          <div class="aware-item">
-            <img src="/image/malware.png" alt="Malware Threats" />
-            <h4>Malware Threats</h4>
-            <p>
-              Avoid downloading unknown files or clicking suspicious pop-ups.
-              Keep your antivirus updated.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Tips Section -->
-    <section class="tips" id="tips">
-      <div class="container">
-        <h2>Online Safety Tips</h2>
-        <p class="section-intro">
-          Practice these habits to ensure your online safety and digital
-          well-being.
-        </p>
-        <div class="tips-grid">
-          <div class="tip-item">
-            <h4>Use Strong Passwords</h4>
-            <p>
-              Combine letters, numbers, and symbols to create strong passwords.
-              Avoid using the same one for multiple accounts.
-            </p>
-          </div>
-          <div class="tip-item">
-            <h4>Think Before You Share</h4>
-            <p>
-              Don’t post personal information like your address or school
-              publicly online.
-            </p>
-          </div>
-          <div class="tip-item">
-            <h4>Update Regularly</h4>
-            <p>
-              Keep your apps, browsers, and software updated to stay protected
-              from new threats.
-            </p>
-          </div>
-          <div class="tip-item">
-            <h4>Be Respectful</h4>
-            <p>
-              Treat others kindly online. Report any form of harassment or
-              bullying.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!--About Section-->
-    <section class="about" id="about">
-      <div class="about-container">
-        <h2>About NetAware</h2>
-        <div class="about-content">
-          <div class="about-item">
-            <h4>Mission</h4>
-            <p>
-              To promote cyber awareness and empower users with knowledge to
-              stay safe online.
-            </p>
-          </div>
-          <div class="about-item">
-            <h4>Vision</h4>
-            <p>A world of responsible, informed, and cybersmart individuals.</p>
-          </div>
-          <div class="about-item">
-            <h4>Why NetAware Matters</h4>
-            <p>
-              Discuss digital threats and highlight the importance of online
-              responsibility.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
      <!-- Contact Section -->
     <section class="contact" id="contact">
       <div class="contact-container">
@@ -220,19 +122,21 @@
           </div>
         </div>
 
+    <!-- Contact Section -->
     <section class="contact" id="contact">
       <div class="contact-container">
-        <h2>Contact Us</h2>
+        <h2><i style="color: #e64e50;" class="fas fa-phone"></i> Contact Us</h2>
         <div class="contact-content">
           <p>
-            If you have questions, feedback, or collaboration ideas, feel free
-            to reach out to us.
+            Have a question or want to work together? Send me a message!
           </p>
+
           <div class="contact-info">
-            <p><strong>Email:</strong> NetAware@gmail</p>
-            <p><strong>Phone:</strong> 09092216599</p>
-            <p><strong>Address:</strong> Malaybalay city , Philippines</p>
+            <p><i style="color: #e64e50;" class="fas fa-envelope"></i><strong>Email:</strong> NetAware@gmail.com</p>
+            <p><i style="color: #e64e50;" class="fas fa-envelope"></i><strong>Phone:</strong> 09092216599</p>
+            <p><i style="color: #e64e50;" class="fas fa-map-marker-alt"></i><strong>Address:</strong> Malaybalay City, Philippines</p>
           </div>
+
           <form class="contact-form">
             <input type="text" placeholder="Your Name" required />
             <input type="email" placeholder="Your Email" required />
@@ -243,22 +147,24 @@
       </div>
     </section>
 
+    <!-- Social Media Links -->
     <footer class="site-footer">
       <div class="container">
         <h2 class="footer-logo"><strong>NetAware</strong></h2>
-        <div class="footer-links">
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#awareness">Awareness</a>
-          <a href="#tips">Tips</a>
-          <a href="#contact">Contact</a>
-        </div>
-
-        <div class="footer-social">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-        </div>
+      <div class="footer-social">
+      <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-facebook-f"></i> Facebook
+      </a>
+      <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-twitter"></i> Twitter
+      </a>
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-instagram"></i> Instagram
+      </a>
+       <a href="mailto:yourname@gmail.com" >
+        <i class="fas fa-envelope"></i> Email
+    </a>
+    </div>
         <p>© NetAware 2025. Designed to make you smarter online.</p>
       </div>
     </footer>
@@ -266,29 +172,9 @@
 <!-- Back to Top Button -->
 <button id="backToTop" title="Go to top">↑</button>
 
-<script>
-  const topBtn = document.getElementById("backToTop");
-
-  // 🔥 TEST MODE: Always show button
-  topBtn.style.display = "block";
-
-  // Normal scroll behavior (still included)
-  window.onscroll = function () {
-    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-      topBtn.style.display = "block";
-    } else {
-      topBtn.style.display = "none";
-    }
-  };
-
-  topBtn.addEventListener("click", function () {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-</script>
+<script src="script.js"></script>
 </body>
 </html>
-
+<script src="script.js"></script>
 </body>
-</html>
-  </body>
 </html>
