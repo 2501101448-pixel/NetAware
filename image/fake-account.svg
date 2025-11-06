@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500" role="img" aria-labelledby="title desc">
+  <title id="title">Fake Profiles or Impersonation</title>
+  <desc id="desc">Illustration showing overlapping user profiles and a mask to represent fake accounts and impersonation. Includes title and short description text.</desc>
+  <defs>
+    <linearGradient id="bgGrad" x1="0" x2="1">
+      <stop offset="0" stop-color="#f8fafc"/>
+      <stop offset="1" stop-color="#eef2ff"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0" x2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#f1f5f9"/>
+    </linearGradient>
+    <filter id="softShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#0b1220" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#bgGrad)"/>
+
+  <!-- Left: illustrative card with overlapping profiles -->
+  <g transform="translate(30,50)">
+    <rect x="0" y="0" width="320" height="400" rx="18" fill="url(#cardGrad)" stroke="#e6eef8" stroke-width="1" filter="url(#softShadow)"/>
+
+    <!-- large faded avatar in back -->
+    <g transform="translate(40,40)" opacity="0.9">
+      <circle cx="90" cy="80" r="50" fill="#dbeafe"/>
+      <rect x="40" y="150" width="100" height="12" rx="6" fill="#e6eef8"/>
+      <rect x="25" y="172" width="130" height="10" rx="5" fill="#e6eef8"/>
+    </g>
+
+    <!-- front avatar (fake profile) -->
+    <g transform="translate(140,30)">
+      <rect x="0" y="0" width="120" height="120" rx="14" fill="#fff" stroke="#cfe8ff" stroke-width="2"/>
+      <circle cx="60" cy="48" r="28" fill="#7dd3fc"/>
+      <rect x="22" y="86" width="76" height="12" rx="6" fill="#c9f6ff"/>
+      <rect x="12" y="102" width="96" height="10" rx="5" fill="#cfeefe"/>
+      <!-- mask overlay to suggest impersonation -->
+      <g transform="translate(10,12)">
+        <path d="M68 24c0 4-4 7-9 7s-9-3-9-7 4-7 9-7 9 3 9 7z" fill="#0ea5ff" opacity="0.95"/>
+        <rect x="28" y="32" width="64" height="12" rx="6" fill="#0ea5ff" opacity="0.95"/>
+      </g>
+    </g>
+
+    <!-- warning bubble -->
+    <g transform="translate(230,230)">
+      <circle cx="0" cy="0" r="28" fill="#fff3cd" stroke="#ffd966" stroke-width="2"/>
+      <text x="-6" y="8" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="20" fill="#d97706">!</text>
+    </g>
+
+    <!-- small "ghost" profile to the left indicating multiple fake accounts -->
+    <g transform="translate(20,210)" opacity="0.85">
+      <circle cx="30" cy="30" r="18" fill="#e0f2fe"/>
+      <rect x="8" y="58" width="44" height="8" rx="4" fill="#e6f5ff"/>
+    </g>
+  </g>
+
+  <!-- Right: Title + description -->
+  <g transform="translate(370,90)">
+    <text x="0" y="0" font-family="Helvetica Neue, Arial, sans-serif" font-size="20" font-weight="700" fill="#0f1724">Fake Profiles</text>
+    <text x="0" y="28" font-family="Helvetica Neue, Arial, sans-serif" font-size="20" font-weight="700" fill="#0f1724">or Impersonation</text>
+
+    <foreignObject x="-10" y="52" width="220" height="200">
+      <body xmlns="http://www.w3.org/1999/xhtml">
+        <div style="font-family: Arial, Helvetica, sans-serif; color:#475569; font-size:13px; line-height:1.4;">
+          Some bullies create <strong>fake accounts</strong> to post rumors or pretend to be someone else to <strong>embarrass others</strong>.
+        </div>
+      </body>
+    </foreignObject>
+  </g>
+
+  <!-- Bottom label -->
+  <text x="30" y="480" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#94a3b8">Illustration — generated SVG</text>
+</svg>
