@@ -19,7 +19,7 @@
   <body>
     <header class="site-header">
       <div class="container">
-        <a id="home" class="logo">NetAware</a>
+       <a class="logo">NetAware</a>
         <nav class="main-nav">
           <ul>
             <li><a href="#home">Home</a></li>
@@ -261,33 +261,6 @@
         <p>© NetAware 2025. Designed to make you smarter online.</p>
       </div>
     </footer>
-
-<!-- Back to Top Button -->
-<button id="backToTop" title="Go to top">↑</button>
-
-<script>
-  const topBtn = document.getElementById("backToTop");
-
-  // 🔥 TEST MODE: Always show button
-  topBtn.style.display = "block";
-
-  // Normal scroll behavior (still included)
-  window.onscroll = function () {
-    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-      topBtn.style.display = "block";
-    } else {
-      topBtn.style.display = "none";
-    }
-  };
-
-  topBtn.addEventListener("click", function () {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-</script>
-</body>
-</html>
-
-</body>
-</html>
+   <a href="#home" class="back-to-top" title="Back to Top">↑</a>
   </body>
 </html>
