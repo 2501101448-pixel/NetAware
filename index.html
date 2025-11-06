@@ -22,7 +22,7 @@
   <body>
     <header class="site-header">
       <div class="container">
-        <a id="home" class="logo">NetAware</a>
+       <a class="logo">NetAware</a>
         <nav class="main-nav">
           <ul>
             <li><a href="#home">Home</a></li>
@@ -73,7 +73,7 @@
         </div>
 
         <div class="card">
-          <img src="" alt="Cyberbullying Awareness" />
+          <img src="image/cyberbullying-awareness.jpg" alt="Cyberbullying Awareness" />
           <div class="card-content">
             <h3>Cyberbullying Awareness</h3>
             <p>
@@ -172,9 +172,29 @@
 <!-- Back to Top Button -->
 <button id="backToTop" title="Go to top">↑</button>
 
-<script src="script.js"></script>
+<script>
+  const topBtn = document.getElementById("backToTop");
+
+  // 🔥 TEST MODE: Always show button
+  topBtn.style.display = "block";
+
+  // Normal scroll behavior (still included)
+  window.onscroll = function () {
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+      topBtn.style.display = "block";
+    } else {
+      topBtn.style.display = "none";
+    }
+  };
+
+  topBtn.addEventListener("click", function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>
 </body>
 </html>
-<script src="script.js"></script>
+
 </body>
+</html>
+  </body>
 </html>
