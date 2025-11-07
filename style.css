@@ -55,7 +55,14 @@ body {
   color: #FF5A5F;
   text-decoration: none;
 }
-
+.main-nav a.active {
+  background-color: #FF5A5F; 
+  color: #fff;               
+  border-radius: 8px;       
+  font-weight: 600;         
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); 
+  transition: 0.3s;
+}         
 .main-nav ul {
   display: flex;
   list-style: none;
@@ -76,7 +83,9 @@ body {
   color: #FF5A5F;
 }
 
-/* MOBILE NAV */
+/* -------------------------------
+   MOBILE NAVIGATION
+--------------------------------- */
 @media (max-width: 640px) {
   .main-nav ul {
     flex-direction: column;
@@ -123,7 +132,7 @@ body {
   font-weight: 700;
 }
 
-.hero h1 span{
+.hero h1 span {
   color: #FF5A5F;
 }
 
@@ -133,6 +142,9 @@ body {
   color: #f0f0f0;
 }
 
+/* -------------------------------
+   BUTTONS
+--------------------------------- */
 .btn-primary {
   display: inline-block;
   padding: 14px 28px;
@@ -144,16 +156,20 @@ body {
   text-decoration: none;
   transition: 0.2s;
 }
-.back-btn-container {
-  text-align: center;
-  margin: 30px 0;
-}
+
 .btn-primary:hover {
   background: #e64e50;
   transform: translateY(-2px);
 }
 
-/* Hero Search Bar */
+.back-btn-container {
+  text-align: center;
+  margin: 30px 0;
+}
+
+/* -------------------------------
+   HERO SEARCH BAR
+--------------------------------- */
 .hero-search {
   display: flex;
   justify-content: center;
@@ -177,14 +193,14 @@ body {
   border-left: none;
   border-radius: 0 6px 6px 0;
   background-color: #e64e50;
-  color: white;
+  color: #fff;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 2rem;
   transition: 0.3s;
 }
 
 .hero-search button:hover {
-  background-color:#e64e50;
+  background-color: #e64e50;
 }
 
 .search-suggestions {
@@ -203,7 +219,7 @@ body {
   padding: 0;
   display: none;
   z-index: 1000;
-   border-radius: 5px;
+  border-radius: 5px;
 }
 
 .search-suggestions li {
@@ -214,7 +230,6 @@ body {
 .search-suggestions li:hover {
   background-color: #f2f2f2;
 }
-
 
 /* ===============================
    CARDS GRID
@@ -270,7 +285,6 @@ body {
   border-radius: 999px;
   text-decoration: none;
   transition: 0.3s;
-  
 }
 
 .btn-outline:hover {
@@ -287,7 +301,8 @@ body {
   text-align: center;
 }
 
-.about h2 {
+.about h2,
+.tips1 h2 {
   font-size: 2rem;
   font-weight: 700;
   color: #222;
@@ -318,14 +333,50 @@ body {
   margin-bottom: 8px;
 }
 
-.about-item p, .about-container > p {
+.about-item p,
+.about-container > p {
   font-size: 1rem;
   color: #555;
   max-width: 700px;
   margin: 0 auto;
 }
-/* Awareness Section */
-.awareness {
+
+/* -------------------------------
+   INTRO BOX
+--------------------------------- */
+section[id] {
+  scroll-margin-top: 100px;
+}
+
+.intro-box {
+  background: #f0f6ff;
+  border-left: 5px solid #FF5A5F;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.intro-box h3 {
+  font-size: 1.5rem;
+  color: #003366;
+  margin-bottom: 10px;
+}
+
+.intro-box p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.7;
+}
+
+em {
+  color: #FF5A5F;
+}
+
+/* ===============================
+   AWARENESS & TIPS SECTION
+================================= */
+.awareness,
+.tips1 {
   background-color: #f9f9f9;
   padding: 80px 0;
   text-align: center;
@@ -381,7 +432,6 @@ body {
   font-size: 0.95rem;
   line-height: 1.6;
 }
-
 
 /* Tips Section */
 .tips {
@@ -546,36 +596,70 @@ body {
 }
 
 /* ===============================
-   FOOTER
+   REFERENCES SECTION
 ================================= */
-.site-footer {
-  background: #fff;
-  padding: 40px 0;
+.references {
+  background-color: #fff;
+  padding: 80px 20px;
   text-align: center;
-  color: #777;
-  font-size: 0.9rem;
+  border-top: 2px solid rgba(255, 90, 95, 0.2);
 }
 
-.footer-links {
-  margin: 15px 0;
+.references h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 30px;
+  position: relative;
 }
 
-.footer-links a {
+.references h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #FF5A5F;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.references ul {
+  list-style: none;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0;
+  text-align: left;
+}
+
+.references li {
+  background: #f9f9f9;
+  margin-bottom: 15px;
+  padding: 18px 20px;
+  border-left: 5px solid #FF5A5F;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  color: #444;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.references li:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+.references em {
   color: #FF5A5F;
-  text-decoration: none;
-  margin: 0 8px;
+  font-style: italic;
   font-weight: 500;
 }
 
-.footer-links a:hover {
-  text-decoration: underline;
-}
-
-/* ==============================
-   FOOTER STYLES
-============================== */
+/* ===============================
+   FOOTER
+================================= */
 .site-footer {
-  background-color: #f8f9fa; /* Light background */
+  background-color: #f8f9fa;
   padding: 40px 20px;
   text-align: center;
   font-family: 'Poppins', sans-serif;
@@ -586,7 +670,7 @@ body {
 .site-footer .footer-logo {
   font-size: 1.6rem;
   font-weight: 700;
-  color: #ff5c5c; /* Match your brand color */
+  color: #ff5c5c;
   margin-bottom: 15px;
 }
 
@@ -608,7 +692,7 @@ body {
 }
 
 .site-footer .footer-social a:hover {
-  color: #ff5c5c; /* Hover effect */
+  color: #ff5c5c;
   transform: translateY(-3px);
 }
 
@@ -618,22 +702,43 @@ body {
   margin-top: 5px;
 }
 
-/* Back to Top Button Adjustments */
-#backToTop {
+.footer-links {
+  margin: 15px 0;
+}
+
+.footer-links a {
+  color: #FF5A5F;
+  text-decoration: none;
+  margin: 0 8px;
+  font-weight: 500;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* ===============================
+   BACK TO TOP BUTTON
+================================= */
+#backToTop,
+.back-to-top {
   position: fixed;
   bottom: 30px;
   right: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+  z-index: 1000;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+#backToTop {
   background-color: #ff5c5c;
   color: #fff;
-  border: none;
-  border-radius: 50%;
   width: 45px;
   height: 45px;
   font-size: 22px;
-  cursor: pointer;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  z-index: 1000;
+  border: none;
 }
 
 #backToTop:hover {
@@ -641,8 +746,23 @@ body {
   transform: translateY(-3px);
 }
 
+.back-to-top {
+  background-color: #0078ff;
+  color: white;
+  text-decoration: none;
+  font-size: 26px;
+  font-weight: bold;
+  padding: 12px 18px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.back-to-top:hover {
+  transform: scale(1.2);
+  background-color: #005fcc;
+}
+
 /* ===============================
-   PAGE SECTIONS 
+   PAGE SECTIONS
 ================================= */
 .protect-section,
 .examples,
@@ -652,6 +772,12 @@ body {
   border-radius: 15px;
   margin-top: 50px;
 }
+
+.tips-section ul {
+  list-style: none;
+  padding: 0;
+}
+
 .tips-section li {
   background: white;
   margin: 10px auto;
@@ -660,11 +786,9 @@ body {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   max-width: 600px;
   text-align: left;
-  font-weight: 500;}
-  
-.tips-section ul {
-  list-style: none;
-  padding: 0;}
+  font-weight: 500;
+}
+
 .steps-grid,
 .example-cards {
   display: grid;
@@ -694,38 +818,6 @@ body {
   margin-bottom: 15px;
 }
 
-.back-to-top {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  background-color: #0078ff;
-  color: white;
-  text-decoration: none;
-  font-size: 26px;
-  font-weight: bold;
-  border-radius: 50%;
-  padding: 12px 18px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  z-index: 1000;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-/* Hover effect */
-.back-to-top:hover {
-  transform: scale(1.2);
-  background-color: #005fcc;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-/* Add a nice hover effect */
-.back-to-top:hover {
-  transform: scale(1.2);
-  background-color: #005fcc;
-}
-
 /* ===============================
    RESPONSIVE DESIGN
 ================================= */
@@ -742,35 +834,35 @@ html {
     flex-direction: column;
   }
 
-.contact-form {
-  background: #fff;
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-}
+  .contact-form {
+    background: #fff;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  }
 
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 12px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-}
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
 
-.contact-form button {
-  background: #ff6b35;
-  border: none;
-  padding: 12px 25px;
-  color: #fff;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: 600;
-}
+  .contact-form button {
+    background: #ff6b35;
+    border: none;
+    padding: 12px 25px;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+  }
 
-.contact-form button:hover {
-  background: #e25e2f;
-}
+  .contact-form button:hover {
+    background: #e25e2f;
+  }
 }
