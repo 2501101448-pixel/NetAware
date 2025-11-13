@@ -12,6 +12,21 @@ window.onscroll = function () {
   }
 };
 
+// Hide suggestions when clicking outside
+document.addEventListener("click", (e) => {
+  if(!searchInput.contains(e.target)) {
+    suggestionsList.style.display = "none";
+  } 
+});
+
+const menuButton = document.querySelector('.mobile-menu-button');
+const mainNav = document.querySelector('.main-nav');
+
+menuButton.addEventListener('click', () => {
+  mainNav.classList.toggle('active');
+});
+
+
 topBtn.addEventListener("click", function () {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
@@ -55,11 +70,4 @@ searchInput.addEventListener("input", function() {
   });
 
   suggestionsList.style.display = "block";
-});
-
-// Hide suggestions when clicking outside
-document.addEventListener("click", (e) => {
-  if(!searchInput.contains(e.target)) {
-    suggestionsList.style.display = "none";
-  }
 });

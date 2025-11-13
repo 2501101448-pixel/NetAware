@@ -83,26 +83,71 @@ body {
   color: #FF5A5F;
 }
 
-/* -------------------------------
-   MOBILE NAVIGATION
---------------------------------- */
-@media (max-width: 640px) {
+/* Hide the mobile menu button by default */
+.mobile-menu-button {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Show the mobile menu button only on mobile screens */
+@media (max-width: 640px ) {
+  .mobile-menu-button {
+    display: block;
+    z-index: 1000;
+  }
+
+  /* Optionally hide the regular nav menu until button is clicked */
   .main-nav ul {
     flex-direction: column;
     background: #fff;
     position: absolute;
-    top: 70px;
-    right: 0;
+    top: 50px;
+    right: 10px;
     width: 200px;
     border-radius: 10px;
-    display: none;
+    overflow: hidden;
+    max-height: 100%;              /* Hidden by default */
+    opacity: 0;
+    padding: 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: max-height 0.4s ease, opacity 0.3s ease;
   }
 
   .main-nav.active ul {
-    display: flex;
+    max-height: 400px;          /* Enough space for menu items */
+    opacity: 1;
+  }
+  .mobile-menu-button i {
+    margin-left: 325px;
+    color: #FF5A5F;
+  }
+  .main-nav ul li {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    border-bottom: 1px solid #eee;
+  }
+
+  .main-nav ul li:last-child {
+    border-bottom: none;
+  }
+
+  .main-nav ul li a {
+    color: #FF5A5F;
+    text-decoration: none;
+    font-weight: 100;
+    display: block;
+    transition: background 0.3s;
+  }
+
+  .main-nav ul li a:hover {
+    background: #f5f5f5;
   }
 }
-
 /* ===============================
    HERO SECTION
 ================================= */
@@ -133,7 +178,7 @@ body {
 }
 
 .hero h1 span {
-  color: #FF5A5F;
+  color:  
 }
 
 .hero p {
