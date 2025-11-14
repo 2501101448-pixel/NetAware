@@ -26,7 +26,7 @@ body {
    CONTAINER
 ================================= */
 .container {
-  width: 90%;
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -52,11 +52,11 @@ body {
 .logo {
   font-size: 1.8rem;
   font-weight: 700;
-  color: #FF5A5F;
+  color: #00bfff;
   text-decoration: none;
 }
 .main-nav a.active {
-  background-color: #FF5A5F; 
+  background-color: #00bfff; 
   color: #fff;               
   border-radius: 8px;       
   font-weight: 600;         
@@ -80,7 +80,7 @@ body {
 
 .main-nav a:hover {
   background: rgba(255, 90, 95, 0.1);
-  color: #FF5A5F;
+  color: #00bfff;
 }
 
 /* Hide the mobile menu button by default */
@@ -123,7 +123,7 @@ body {
   }
   .mobile-menu-button i {
     margin-left: 325px;
-    color: #FF5A5F;
+    color: #00bfff;
   }
   .main-nav ul li {
     list-style: none;
@@ -137,7 +137,7 @@ body {
   }
 
   .main-nav ul li a {
-    color: #FF5A5F;
+    color: #00bfff;
     text-decoration: none;
     font-weight: 100;
     display: block;
@@ -151,12 +151,83 @@ body {
 /* ===============================
    HERO SECTION
 ================================= */
+
 .hero {
-  background: url('/image/images.jpg') center/cover no-repeat;
-  color: #fff;
+  position: relative; /* So bgAnimation is relative to hero */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  padding: 120px 20px;
-  position: relative;
+  height: 550px; /* adjust as needed */
+  overflow: hidden; /* hide overflowing animation */
+  background: #111; /* fallback color */
+  color: #fff;
+  backdrop-filter: blur(1px);
+}
+
+.hero .container {
+  position: relative; /* keep content above animation */
+  z-index: 1;
+}
+
+.bgAnimation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: repeat(20, 1fr);
+  background: #1d1d1d;
+  filter: saturate(2);
+  overflow: hidden;
+  z-index: 1; /* behind content */
+  padding: 0;
+}
+
+.colorBox {
+  background: #1d1d1d;
+  margin: 1px;
+  transition: 2s ease;
+  filter: brightness(1.1);
+  z-index: 2;
+}
+
+.colorBox:hover {
+  background: #00bfff;
+  transition-duration: 0s;
+}
+
+.backgroundAmim {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: #00bfff;
+  filter: blur(60px);
+  animation: animBack 6s linear infinite;
+}
+
+@keyframes animBack {
+  0% { 
+    top: -60px; 
+  }
+  100% {
+     top: 120%; 
+    }
+}
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2em;
+  }
+  .hero p {
+    font-size: 1em;
+  }
+  .colorBox {
+    margin: 1px;
+  }
 }
 
 .hero::after {
@@ -195,7 +266,7 @@ body {
   padding: 14px 28px;
   font-weight: 600;
   color: #fff;
-  background: #FF5A5F;
+  background: #00bfff;
   border: none;
   border-radius: 999px;
   text-decoration: none;
@@ -203,7 +274,7 @@ body {
 }
 
 .btn-primary:hover {
-  background: #e64e50;
+  background: #00bfff;
   transform: translateY(-2px);
 }
 
@@ -237,7 +308,7 @@ body {
   border: 1px solid #ccc;
   border-left: none;
   border-radius: 0 6px 6px 0;
-  background-color: #e64e50;
+  background-color: #00bfff;
   color: #fff;
   cursor: pointer;
   font-size: 2rem;
@@ -245,7 +316,7 @@ body {
 }
 
 .hero-search button:hover {
-  background-color: #e64e50;
+  background-color: #00bfff;
 }
 
 .search-suggestions {
@@ -253,7 +324,7 @@ body {
   top: 100%;
   left: 25%;
   right: 25%;
-  color: #e64e50;
+  color: #00bfff;
   background: white;
   border: 125px;
   border-top: none;
@@ -325,8 +396,8 @@ body {
   display: inline-block;
   padding: 10px 20px;
   font-size: 0.95rem;
-  color: #FF5A5F;
-  border: 2px solid #FF5A5F;
+  color: #00bfff;
+  border: 2px solid #00bfff;
   border-radius: 999px;
   text-decoration: none;
   transition: 0.3s;

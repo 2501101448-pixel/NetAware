@@ -1,3 +1,4 @@
+
 // Back to Top Button
 const topBtn = document.getElementById("backToTop");
 
@@ -11,6 +12,16 @@ window.onscroll = function () {
     topBtn.style.display = "none";
   }
 };
+
+const heroBgAnimation = document.getElementById('heroBgAnimation');
+const numberOfColorBoxes = 500;
+
+for (let i = 0; i < numberOfColorBoxes; i++) {
+  const colorBox = document.createElement('div');
+  colorBox.classList.add('colorBox');
+  heroBgAnimation.append(colorBox);
+}
+
 
 // Hide suggestions when clicking outside
 document.addEventListener("click", (e) => {
