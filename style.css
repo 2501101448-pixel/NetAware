@@ -35,7 +35,7 @@ body {
    HEADER & NAVIGATION
 ================================= */
 .site-header {
-  background: #fff;
+  background: #0b0b20;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   position: sticky;
   top: 0;
@@ -72,7 +72,7 @@ body {
 .main-nav a {
   text-decoration: none;
   font-weight: 500;
-  color: #555;
+  color: #00bfff; 
   padding: 8px 14px;
   border-radius: 8px;
   transition: 0.3s;
@@ -110,7 +110,7 @@ body {
     width: 200px;
     border-radius: 10px;
     overflow: hidden;
-    max-height: 100%;              /* Hidden by default */
+    max-height: 50%;              /* Hidden by default */
     opacity: 0;
     padding: 0;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -180,15 +180,14 @@ body {
   display: grid;
   grid-template-columns: repeat(20, 1fr);
   grid-template-rows: repeat(20, 1fr);
-  background: #1d1d1d;
-  filter: saturate(2);
+  filter: blur(2px);
+  background: #0b0b20;
   overflow: hidden;
   z-index: 1; /* behind content */
   padding: 0;
 }
 
 .colorBox {
-  background: #1d1d1d;
   margin: 1px;
   transition: 2s ease;
   filter: brightness(1.1);
@@ -251,7 +250,7 @@ body {
 }
 
 .hero h1 span {
-  color:  
+  color: #00bfff; 
 }
 
 .hero p {
@@ -285,69 +284,68 @@ body {
   margin: 30px 0;
 }
 
-/* -------------------------------
-   HERO SEARCH BAR
---------------------------------- */
-.hero-search {
+/*/* Container of Search Input */
+.search-wrapper {
+  overflow: hidden; /* Required for collapse animation */
+  max-width: 0; /* Hidden by default */
+  transition: max-width 0.4s ease; 
   display: flex;
-  justify-content: center;
-  margin-top: 25px;
-  width: 100%;
+  margin-top: -9px;
+  align-items: center;
 }
 
+/* Input styling stays the same */
 .hero-search input {
-  width: 70%;
-  max-width: 500px;
-  padding: 12px 15px;
+  width: 250px; 
+  padding: 8px 10px;
   border: 1px solid #ccc;
   border-radius: 6px 0 0 6px;
   font-size: 1rem;
   outline: none;
+  background: #fff;
 }
 
+/* Expand class when button is clicked */
+.search-wrapper.active {
+  max-width: 300px; /* Expand animation */
+}
+
+/* Search button */
 .hero-search button {
-  padding: 12px 18px;
+  padding: 8px 10px;
   border: 1px solid #ccc;
-  border-left: none;
-  border-radius: 0 6px 6px 0;
+  border-radius: 6px;
   background-color: #00bfff;
   color: #fff;
+  margin-top: -9px;
   cursor: pointer;
-  font-size: 2rem;
+  font-size: 1rem;
   transition: 0.3s;
 }
 
-.hero-search button:hover {
-  background-color: #00bfff;
+.hero-search {
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
+/* Suggestions dropdown (same as before) */
 .search-suggestions {
   position: absolute;
-  top: 100%;
-  left: 25%;
-  right: 25%;
+  top: 75%;
+  right: 73px;
+  width: 250px;
   color: #00bfff;
   background: white;
-  border: 125px;
-  border-top: none;
+  border-radius: 5px;
+  padding: 5px;
   max-height: 200px;
   overflow-y: auto;
   list-style: none;
-  margin: 0;
-  padding: 0;
   display: none;
   z-index: 1000;
-  border-radius: 5px;
 }
 
-.search-suggestions li {
-  padding: 10px;
-  cursor: pointer;
-}
-
-.search-suggestions li:hover {
-  background-color: #f2f2f2;
-}
 
 /* ===============================
    CARDS GRID
@@ -406,7 +404,7 @@ body {
 }
 
 .btn-outline:hover {
-  background: #FF5A5F;
+  background: #00bfff; 
   color: #fff;
 }
 
