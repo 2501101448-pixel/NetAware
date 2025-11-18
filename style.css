@@ -67,6 +67,7 @@ body {
   display: flex;
   list-style: none;
   gap: 15px;
+  margin-top: 5px;
 }
 
 .main-nav a {
