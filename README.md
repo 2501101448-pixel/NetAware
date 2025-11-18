@@ -41,5 +41,3 @@ Open an issue or PR with focused changes; keep changes minimal and test locally 
 
 ---
 This README focuses on quick local preview, common pitfalls observed in the repository, and concrete editing steps for contributors.
-# NetAware
-WEBBLOG PROJECT
