@@ -1,6 +1,9 @@
-
 // Back to Top Button
 const topBtn = document.getElementById("backToTop");
+
+// Search elements MUST be placed before they're used
+const searchInput = document.getElementById("heroSearchInput");
+const suggestionsList = document.getElementById("heroSearchSuggestions");
 
 // 🔥 Always show button (for testing)
 topBtn.style.display = "block";
@@ -22,12 +25,11 @@ for (let i = 0; i < numberOfColorBoxes; i++) {
   heroBgAnimation.append(colorBox);
 }
 
-
 // Hide suggestions when clicking outside
 document.addEventListener("click", (e) => {
-  if(!searchInput.contains(e.target)) {
+  if (!searchInput.contains(e.target)) {
     suggestionsList.style.display = "none";
-  } 
+  }
 });
 
 const menuButton = document.querySelector('.mobile-menu-button');
@@ -37,13 +39,9 @@ menuButton.addEventListener('click', () => {
   mainNav.classList.toggle('active');
 });
 
-
 topBtn.addEventListener("click", function () {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
-
-const searchInput = document.getElementById("heroSearchInput");
-const suggestionsList = document.getElementById("heroSearchSuggestions");
 
 // List of topics with page URLs
 const topics = [
@@ -53,18 +51,18 @@ const topics = [
 ];
 
 // Show suggestions as user types
-searchInput.addEventListener("input", function() {
+searchInput.addEventListener("input", function () {
   const query = this.value.toLowerCase();
   suggestionsList.innerHTML = "";
 
-  if(query === "") {
+  if (query === "") {
     suggestionsList.style.display = "none";
     return;
   }
 
   const filtered = topics.filter(topic => topic.name.toLowerCase().includes(query));
 
-  if(filtered.length === 0) {
+  if (filtered.length === 0) {
     suggestionsList.style.display = "none";
     return;
   }
@@ -74,7 +72,7 @@ searchInput.addEventListener("input", function() {
     li.textContent = topic.name;
 
     li.addEventListener("click", () => {
-      window.location.href = topic.url; // redirect to page
+      window.location.href = topic.url;
     });
 
     suggestionsList.appendChild(li);
