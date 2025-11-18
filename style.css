@@ -94,7 +94,7 @@ body {
 }
 
 /* Show the mobile menu button only on mobile screens */
-@media (max-width: 640px ) {
+@media (max-width: 768px ) {
   .mobile-menu-button {
     display: block;
     z-index: 1000;
@@ -163,6 +163,7 @@ body {
   background: #111; /* fallback color */
   color: #fff;
   backdrop-filter: blur(1px);
+  padding: 60px 20px;
 }
 
 .hero .container {
@@ -218,6 +219,7 @@ body {
      top: 120%; 
     }
 }
+
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 2em;
