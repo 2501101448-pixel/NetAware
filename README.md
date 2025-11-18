@@ -1,4 +1,4 @@
-# NetAware — Static Info Site
+# NetAware
 
 NetAware is a small static informational website (HTML/CSS/JS) intended as a simple weblog and guide pages. No build system or server-side code is required — pages are standalone files at the repository root and assets live in the `image/` folder.
 
