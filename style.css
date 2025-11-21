@@ -94,61 +94,6 @@ body {
   color: #333;
 }
 
-/* Show the mobile menu button only on mobile screens */
-@media (max-width: 768px ) {
-  .mobile-menu-button {
-    display: block;
-    z-index: 1000;
-  }
-
-  /* Optionally hide the regular nav menu until button is clicked */
-  .main-nav ul {
-    flex-direction: column;
-    background: #fff;
-    position: absolute;
-    top: 50px;
-    right: 10px;
-    width: 200px;
-    border-radius: 10px;
-    overflow: hidden;
-    max-height: 50%;              /* Hidden by default */
-    opacity: 0;
-    padding: 0;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transition: max-height 0.4s ease, opacity 0.3s ease;
-  }
-
-  .main-nav.active ul {
-    max-height: 400px;          /* Enough space for menu items */
-    opacity: 1;
-  }
-  .mobile-menu-button i {
-    margin-left: 325px;
-    color: #00bfff;
-  }
-  .main-nav ul li {
-    list-style: none;
-    text-align: center;
-    padding: 0;
-    border-bottom: 1px solid #eee;
-  }
-
-  .main-nav ul li:last-child {
-    border-bottom: none;
-  }
-
-  .main-nav ul li a {
-    color: #00bfff;
-    text-decoration: none;
-    font-weight: 100;
-    display: block;
-    transition: background 0.3s;
-  }
-
-  .main-nav ul li a:hover {
-    background: #f5f5f5;
-  }
-}
 /* ===============================
    HERO SECTION
 ================================= */
@@ -466,10 +411,11 @@ body {
 --------------------------------- */
 section[id] {
   scroll-margin-top: 100px;
+
 }
 
 .intro-box {
-  background: #f0f6ff;
+  background: transparent;
   border-left: 5px solid #00bfff; 
   padding: 20px;
   border-radius: 10px;
@@ -486,7 +432,7 @@ section[id] {
 
 .intro-box p {
   font-size: 1rem;
-  color:  #00bfff;  
+  color:  #00bfff;
   line-height: 1.7;
   background-color: transparent;
 }
@@ -500,21 +446,36 @@ em {
 ================================= */
 .awareness,
 .tips1 {
-  background-color: #f9f9f9;
+  background-color: #fff;
   padding: 80px 0;
   text-align: center;
+  margin-right: -20px;
+  width: 100%;
+}
+
+.awareness{
+  background-color: #0b0b20;
+  color: #00bfff; 
+  padding: 80px 0;
+  text-align: center;
+  margin-left: 0px;
+  margin-right: 0px;
+  width: 100%;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
 }
 
 .awareness h2 {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #222;
+  color: #ddd;
   margin-bottom: 10px;
 }
 
 .awareness .section-intro {
   font-size: 1.1rem;
-  color: #555;
+  color: #ddd;
   max-width: 700px;
   margin: 0 auto 50px;
 }
@@ -527,31 +488,32 @@ em {
 }
 
 .aware-item {
-  background: #fff;
+  background: #1b1b35;
   border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   padding: 30px 20px;
   transition: all 0.3s ease;
+  border: 1px solid rgba(255,255,255,0.05);
 }
 
 .aware-item:hover {
+  background: #26264d;
   transform: translateY(-8px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 
 .aware-item img {
   width: 80px;
   margin-bottom: 20px;
+  border-radius: 5px;
 }
 
 .aware-item h4 {
   color: #00bfff; 
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   margin-bottom: 10px;
 }
 
 .aware-item p {
-  color: #444;
+  color: #ccc;
   font-size: 0.95rem;
   line-height: 1.6;
 }
@@ -559,7 +521,7 @@ em {
 /* Tips Section */
 .tips {
   background-color: #0b0b20;
-  color: #fff;
+  color: #00bfff; 
   padding: 80px 0;
   text-align: center;
 }
@@ -569,6 +531,7 @@ em {
   font-weight: 700;
   color: #fff;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .tips .section-intro {
@@ -602,6 +565,7 @@ em {
   color: #00bfff; 
   font-size: 1.2rem;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .tip-item p {
@@ -941,6 +905,62 @@ em {
   margin-bottom: 15px;
 }
 
+/* Show the mobile menu button only on mobile screens */
+@media (max-width: 768px ) {
+  .mobile-menu-button {
+    display: block;
+    z-index: 1000;
+  }
+
+  /* Optionally hide the regular nav menu until button is clicked */
+  .main-nav ul {
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    width: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    max-height: 50%;              /* Hidden by default */
+    opacity: 0;
+    padding: 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: max-height 0.4s ease, opacity 0.3s ease;
+  }
+
+  .main-nav.active ul {
+    max-height: 400px;          /* Enough space for menu items */
+    opacity: 1;
+  }
+  .mobile-menu-button i {
+    margin-left: 325px;
+    color: #00bfff;
+  }
+  .main-nav ul li {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    border-bottom: 1px solid #eee;
+  }
+
+  .main-nav ul li:last-child {
+    border-bottom: none;
+  }
+
+  .main-nav ul li a {
+    color: #00bfff;
+    text-decoration: none;
+    font-weight: 100;
+    display: block;
+    transition: background 0.3s;
+  }
+
+  .main-nav ul li a:hover {
+    background: #f5f5f5;
+  }
+}
+
 /* ===============================
    RESPONSIVE DESIGN
 ================================= */
@@ -989,4 +1009,134 @@ em {
     background: #00bfff; 
   }
 }
+/* ===============================
+   LARGE SCREENS (DESKTOP XL)
+================================= */
+@media (min-width: 1201px) {
+  .container {
+    max-width: 1400px;
+  }
 
+  .hero {
+    height: 650px;
+  }
+
+  .cards-grid,
+  .awareness-grid,
+  .tips-grid,
+  .steps-grid,
+  .example-cards {
+    gap: 32px;
+  }
+
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+
+  .hero p {
+    font-size: 1.5rem;
+  }
+}
+
+/* ===============================
+   MEDIUM SCREENS (TABLET LANDSCAPE)
+================================= */
+@media (min-width: 769px) and (max-width: 1200px) {
+  .hero {
+    height: 500px;
+    padding: 40px 20px;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  .cards-grid,
+  .awareness-grid,
+  .tips-grid,
+  .steps-grid,
+  .example-cards {
+    gap: 24px;
+  }
+
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* ===============================
+   SMALL TABLET / LARGE MOBILE
+================================= */
+@media (min-width: 641px) and (max-width: 768px) {
+  .hero {
+    height: 450px;
+    padding: 30px 15px;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .main-nav ul {
+    width: 180px;
+  }
+
+  .search-wrapper.active {
+    max-width: 220px;
+  }
+}
+
+/* ===============================
+   EXTRA SMALL DEVICES (PHONES < 640px)
+================================= */
+@media (max-width: 640px) {
+  .hero {
+    height: 400px;
+    padding: 20px 10px;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+  }
+
+  .cards-grid,
+  .awareness-grid,
+  .tips-grid,
+  .steps-grid,
+  .example-cards {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .main-nav ul {
+    top: 45px;
+    right: 5px;
+    width: 160px;
+  }
+
+  .search-wrapper.active {
+    max-width: 180px;
+  }
+
+  .hero-search input {
+    width: 160px;
+  }
+
+  .hero-search button {
+    padding: 6px 8px;
+    font-size: 0.9rem;
+  }
+}

@@ -18,7 +18,6 @@
     <link rel="stylesheet" href="style.css" />
 
     <style>
-      /* Ensure smooth scrolling offset for sections */
       section[id] {
         scroll-margin-top: 100px;
       }
@@ -42,6 +41,16 @@
             <li><a href="tips.html" class="active">Tips</a></li>
             <li><a href="aware.html">Awareness</a></li>
             <li><a href="contact.html">Contact</a></li>
+            <li class="hero-search">
+  <div class="search-wrapper">
+    <input type="text" id="heroSearchInput" placeholder="Search tips or awareness topics..." />
+    <ul id="heroSearchSuggestions" class="search-suggestions"></ul>
+  </div>
+  
+  <button id="heroSearchBtn">
+    <i class="fas fa-search"></i>
+  </button>
+</li>
           </ul>
         </nav>
       </div>
@@ -50,8 +59,8 @@
     <!-- =========================
          INTRODUCTION SECTION
     ============================ -->
-    <section class="tips1" id="tips-intro">
-      <div class="tips1-container">
+    <section class="about" id="tips-intro">
+      <div class="about-container">
         <h2>Online Safety Tips</h2>
 
         <!-- Introduction Box -->
@@ -189,6 +198,18 @@
 
     <!-- SCRIPT -->
     <script src="script.js"></script>
+    </script>
+  </body>
+  </html>
+<script>
+  const searchBtn = document.getElementById("heroSearchBtn");
+const searchWrapper = document.querySelector(".search-wrapper");
+
+searchBtn.addEventListener("click", () => {
+  searchWrapper.classList.toggle("active");
+});
+
+</script>
     <script src="menu.js"></script>
   </body>
 </html>

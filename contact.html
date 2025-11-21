@@ -12,6 +12,11 @@
      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
     <link rel="shortcut icon" href="/image/log.jpg" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
+    <style>
+      section[id] {
+        scroll-margin-top: 100px;
+      }
+    </style>
   </head>
 
   <body>
@@ -29,6 +34,16 @@
             <li><a href="tips.html">Tips</a></li>
             <li><a href="aware.html">Awareness</a></li>
             <li><a href="contact.html" class="active">Contact</a></li>
+            <li class="hero-search">
+  <div class="search-wrapper">
+    <input type="text" id="heroSearchInput" placeholder="Search tips or awareness topics..." />
+    <ul id="heroSearchSuggestions" class="search-suggestions"></ul>
+  </div>
+  
+  <button id="heroSearchBtn">
+    <i class="fas fa-search"></i>
+  </button>
+</li>
           </ul>
         </nav>
       </div>
@@ -123,7 +138,18 @@
 
     <script src="script.js">
 </script>
+</script>
+  </body>
+  </html>
+<script>
+  const searchBtn = document.getElementById("heroSearchBtn");
+const searchWrapper = document.querySelector(".search-wrapper");
+
+searchBtn.addEventListener("click", () => {
+  searchWrapper.classList.toggle("active");
+});
+
+</script>
 <script src="script.js"></script>
-<script src="menu.js"></script>
 </body>
 </html>
