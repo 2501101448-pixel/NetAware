@@ -1312,3 +1312,40 @@ body {
     font-size: 0.9rem;
   }
 }
+
+/* ==========================================
+   FIX TEXT SIZE FOR ALL MOBILE SCREENS
+========================================== */
+@media (max-width: 640px) {
+
+  h1 {
+    font-size: 1.5rem !important;
+    line-height: 1.3;
+  }
+
+  h2 {
+    font-size: 1.2rem !important;
+    line-height: 1.3;
+  }
+
+  h3 {
+    font-size: 1.20rem !important;
+    line-height: 1.3;
+  }
+
+  h4 {
+    font-size: 1.0rem !important;
+    line-height: 1.3;
+  }
+
+  p {
+    font-size: 0.85rem !important;
+    line-height: 1.5;
+  }
+
+  /* Optional: reduce padding to fit text better */
+  section, .container {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+}

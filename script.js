@@ -19,7 +19,6 @@ document.getElementById("backToTop").addEventListener("click", () => {
   });
 });
 
-
 // Search elements MUST be placed before they're used
 const searchInput = document.getElementById("heroSearchInput");
 const suggestionsList = document.getElementById("heroSearchSuggestions");

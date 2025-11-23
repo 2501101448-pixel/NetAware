@@ -23,11 +23,11 @@
     <!-- Header -->
     <header class="site-header">
       <div class="container">
-        <a class="logo" href="index.html">NetAware</a>
+        <a class="logo" id="home" href="index.html">NetAware</a>
         <button class="mobile-menu-button" id="mobileMenuButton">
           <i class="fas fa-bars"></i>
        </button>
-        <nav class="main-nav">
+        <nav class="main-nav" id="mainNav">
           <ul>
             <li><a href="index.html#home">Home</a></li>
             <li><a href="about.html" class="active">About</a></li>
@@ -95,6 +95,10 @@
       </div>
     </section>
 
+    <div class="back-btn-container">
+        <a href="index.html" class="btn btn-outline">← Back to Home</a>
+      </div>
+
     <!-- Footer -->
 <footer class="site-footer">
   <div class="container">
@@ -120,12 +124,12 @@
   </div>
 </footer>
 
-        <!-- Back to Top Button -->
+      <!-- Back to Top Button -->
     <button id="backToTop" title="Go to top">↑</button>
-
-    <!-- JS -->
+    
     <script src="script.js"></script>
     </script>
+    <script src="mobilemenu.js"></script>
   </body>
   </html>
 <script>
@@ -137,8 +141,8 @@ searchBtn.addEventListener("click", () => {
 });
 
 </script>
-<script src="script.js"></script>
 
+    <script src="script.js"></script>
   </body>
 </html>
 
