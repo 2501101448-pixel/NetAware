@@ -322,6 +322,78 @@ body {
   margin: 30px 0;
 }
 
+/* ==========================================================
+   MOBILE — Place Search Bar Beside Menu Button
+========================================================== */
+@media (max-width: 768px) {
+
+  /* Make header a 3-column layout:
+     [LOGO] [SEARCH] [MENU BUTTON]
+  */
+  .site-header .container {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    padding: 12px 15px;
+    position: relative;
+  }
+
+  /* ---------- MENU BUTTON ---------- */
+  .mobile-menu-button {
+    display: block;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #00bfff;
+    cursor: pointer;
+    justify-self: end;
+    z-index: 2000;
+  }
+
+  .mobile-menu-button i {
+    margin-left: 0 !important;
+  }
+
+  /* ---------- SEARCH BAR ---------- */
+  .hero-search {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-self: center;
+    position: static;    /* keeps it inside header row */
+    z-index: 1500;
+  }
+
+  .search-wrapper {
+    display: flex !important;
+    width: 220px !important;
+    max-width: 220px !important;
+    overflow: visible !important;
+  }
+
+  .hero-search input {
+    width: 170px !important;
+    padding: 8px 10px;
+    font-size: 1rem;
+  }
+
+  .hero-search button {
+    padding: 8px 10px;
+    font-size: 1rem;
+  }
+
+  /* ---------- REMOVE SEARCH FROM MENU ---------- */
+  .main-nav ul .hero-search,
+  .main-nav ul .search-wrapper {
+    display: none !important;
+  }
+
+  /* ---------- MOBILE MENU DROPDOWN ---------- */
+  .main-nav ul {
+    top: 60px;
+    right: 10px;
+  }
+}
 
 /*/* Container of Search Input */
 .search-wrapper {
