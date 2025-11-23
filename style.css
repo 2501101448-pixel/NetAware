@@ -84,15 +84,26 @@ body {
   color: #00bfff;
 }
 
-/* Hide the mobile menu button by default */
-.mobile-menu-button {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 1.8rem;
-  cursor: pointer;
-  color: #333;
-}
+/* -------------------------
+     FIX MOBILE MENU BUTTON
+  ------------------------- */
+  .mobile-menu-button {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #00bfff;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 18px;
+    z-index: 2000;
+  }
+
+  .mobile-menu-button i {
+    margin-left: 0 !important; /* Removes the huge left margin */
+    font-size: 2rem;
+  }
 
 /* ===============================
    HERO SECTION
@@ -311,6 +322,7 @@ body {
   margin: 30px 0;
 }
 
+
 /*/* Container of Search Input */
 .search-wrapper {
   overflow: hidden; /* Required for collapse animation */
@@ -493,37 +505,41 @@ body {
 /* -------------------------------
    INTRO BOX
 --------------------------------- */
-section[id] {
-  scroll-margin-top: 100px;
+ /* --------------------------------------------
+      FIX INTRODUCTION SECTION FOR MOBILE
+      Make it look like desktop
+  -------------------------------------------- */
+  .intro-box {
+    margin-left: 20px !important;
+    margin-right: 20px !important;
+    padding: 20px;
+    border-left: 4px solid #00bfff;
+    background: rgba(255,255,255,0.05);
+  }
 
-}
+  .intro-box h3 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
 
-.intro-box {
-  background: transparent;
-  border-left: 5px solid #00bfff; 
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 30px;
-  margin-left: 50px;
-  margin-right: 50px;
-}
+  .intro-box p {
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: center;
+  }
 
-.intro-box h3 {
-  font-size: 1.5rem;
-  color: #00bfff; 
-  margin-bottom: 10px;
-}
+  /* Improve readability of all intro text on mobile */
+  section[id] {
+    scroll-margin-top: 80px;
+  }
 
-.intro-box p {
-  font-size: 1rem;
-  color:  #00bfff;
-  line-height: 1.7;
-  background-color: transparent;
-}
-
-em {
-  color: #00bfff;
-}
+  /* Optional: center content slightly more */
+  .about-content,
+  .protect-section,
+  .tips-section {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 
 /* ===============================
    AWARENESS & TIPS SECTION
