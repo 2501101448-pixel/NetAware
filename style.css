@@ -1347,6 +1347,11 @@ body {
     text-align: justify !important;
   }
 
+  .intro-box{
+    margin-left: 5px !important;
+    margin-right: 5px !important;
+  }
+
   /* Optional: reduce padding to fit text better */
   section, .container {
     padding-left: 10px !important;
