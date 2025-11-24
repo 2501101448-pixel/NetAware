@@ -10,7 +10,7 @@
     <link
      rel="stylesheet"
      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-    <link rel="shortcut icon" href="image/LOGS.jpg" type="image/x-icon" />
+    <link rel="shortcut icon" href="image/logo.jpg" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
     <style>
       section[id] {
@@ -27,7 +27,7 @@
         <button class="mobile-menu-button" id="mobileMenuButton">
           <i class="fas fa-bars"></i>
        </button>
-        <nav class="main-nav">
+        <nav class="main-nav" id="main-nav">
           <ul>
             <li><a href="index.html#home">Home</a></li>
             <li><a href="about.html">About</a></li>
@@ -55,7 +55,7 @@
         <h2>Contact Our Team</h2>
         <div class="team-members">
           <div class="member">
-            <img src="/image/PR1.jpg" alt="Team member"/>
+            <img src="image/PR1.jpg" alt="Team member"/>
             <h4>Chiemel A. Santoile</h4>
             <p>Email: ciemalfeche@gmail.com</p>
             <p>Phone: 09943187329</p>
@@ -67,19 +67,19 @@
             <p>Phone: 09609009322</p>
           </div>
           <div class="member">
-            <img src="/image/reldon.png" alt="Team member"/>
+            <img src="image/reldon.png" alt="Team member"/>
             <h4>Reldon loyd S. Sueta</h4>
             <p>Email:<br>reldonsueta08@gmail.com</p>
             <p>Phone: 09484954679</p>
           </div>
           <div class="member">
-            <img src="/image/profile_ian.jpg" alt="Team member"/>
+            <img src="image/profile_ian.jpg" alt="Team member"/>
             <h4>Edrian Servanes</h4>
             <p>Email: edrianseravanes@gmail.com</p>
             <p>Phone: 09397831081</p>
           </div>
           <div class="member">
-            <img src="/image/criste.jpg" alt="Team member"/>
+            <img src="image/criste.jpg" alt="Team member"/>
             <h4>Joemarie Diaz Criste</h4>
             <p>Email: joemariecriste@gmail.com</p>
             <p>Phone: 09753589849</p>
@@ -140,19 +140,47 @@
 <!-- Back to Top Button -->
 <button id="backToTop" title="Go to top">↑</button>
 
-    <script src="script.js">
-</script>
-</script>
-  </body>
-  </html>
+<!-- Your scripts -->
 <script>
+  // Search toggle
   const searchBtn = document.getElementById("heroSearchBtn");
-const searchWrapper = document.querySelector(".search-wrapper");
+  const searchWrapper = document.querySelector(".search-wrapper");
 
-searchBtn.addEventListener("click", () => {
-  searchWrapper.classList.toggle("active");
-});
+  searchBtn.addEventListener("click", () => {
+    searchWrapper.classList.toggle("active");
+  });
 
+  // Mobile menu toggle
+  const mobileMenuButton = document.getElementById("mobileMenuButton");
+  const mainNav = document.querySelector(".main-nav");
+
+  mobileMenuButton.addEventListener("click", () => {
+    mainNav.classList.toggle("active");
+  });
+
+  const navLinks = document.querySelectorAll(".main-nav ul li a");
+  navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      if (mainNav.classList.contains("active")) {
+        mainNav.classList.remove("active");
+      }
+    });
+  });
+
+  // Back to Top button
+  const backToTop = document.getElementById("backToTop");
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // Optional: show button only when scrolling down
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 200) {
+      backToTop.style.display = "block";
+    } else {
+      backToTop.style.display = "none";
+    }
+  });
 </script>
 <script src="script.js"></script>
 
