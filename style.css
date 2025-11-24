@@ -1350,6 +1350,8 @@ body {
   .intro-box{
     margin-left: 5px !important;
     margin-right: 5px !important;
+    padding-bottom: 0px !important;
+    padding-top: 5px !important;
   }
 
   /* Optional: reduce padding to fit text better */
