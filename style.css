@@ -1341,7 +1341,7 @@ body {
   p {
     font-size: 0.85rem !important;
     line-height: 1.5;
-    text-align: justify;
+    text-align: justify !important;
   }
 
   /* Optional: reduce padding to fit text better */
