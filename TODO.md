@@ -1,0 +1,2 @@
+- [x] Add <script src="script2.js"></script> to index.html before the closing </body> tag.
+- [ ] Test the page to ensure the new functionalities from script2.js work (e.g., back-to-top button, search suggestions, background animation).
