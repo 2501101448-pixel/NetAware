@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NetAware | Homepage</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+     <link
+     rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link rel="shortcut icon" href="image/logo.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      section[id] {
+        scroll-margin-top: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+       <a id="home" class="logo">NetAware</a>
+       </button>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="tips.html">Tips</a></li>
+            <li><a href="aware.html">Awareness</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li class="hero-search">
+  <div class="search-wrapper">
+    <input type="text" id="heroSearchInput" placeholder="Search tips or awareness topics..." />
+    <ul id="heroSearchSuggestions" class="search-suggestions"></ul>
+  </div>
+  <button id="heroSearchBtn"><i class="fas fa-search"></i>
+  </button>
+</li>
+
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+     <!-- Hero Section  -->
+    <section class="hero">
+       <div class="bgAnimation" id="heroBgAnimation">
+        <div class="backgroundAmim"></div>
+       </div>
+      <div class="container">
+        <h1>NetAware is your Guide to becoming a <span>Smarter & Safer Digital Citizen</span></h1>
+        <p class="p2">Think Smart. Stay Safe Online.</p>
+      </div>
+    </section>
+
+    <main class="container">
+      <section class="cards-grid" id="awareness">
+        <div class="card">
+          <img id="page" src="image/data_protection.png" alt="Protect Your data" />
+          <div class="card-content">
+            <h3>Protect Your data</h3>
+            <p> 
+  Data privacy determines who can access your personal information, while data protection uses 
+  tools and policies to secure it (Cloudian ,2025). Learn simple steps to secure your personal information online.
+            </p>
+            <a style="margin-top: 23px;"  class="btn btn-outline" href="blogpage1.html">Learn More</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="image/avoid_scam.svg" alt="Recognize Online Scams" />
+          <div class="card-content">
+            <h3>Recognize Online Scams</h3>
+            <p>The Federal Trade Commission (2023) warns that fake emails, texts, and websites can look real, but their goal is to get your private information.<br> Knowing how to spot these scams helps you stay safe online.</p>
+            <a style="margin-top: 23px;"  class="btn btn-outline" href="blogpage2.html">Learn More</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="image/cyberbullying-awareness.jpg" alt="Cyberbullying Awareness" />
+          <div class="card-content">
+            <h3>Cyberbullying Awareness</h3>
+            <p>
+              UNICEF (2023), Standing up against online bullying starts with empathy — supporting those who are targeted, reporting harmful behavior, and spreading kindness online. Every action helps make the internet safer.
+            </p>
+            <a class="btn btn-outline" href="blogpage3.html">Learn More</a>
+          </div>
+        </div>
+
+
+
+          <div class="card">
+          <img src="image/misin.png" alt="Fake News & Misinformation" />
+          <div class="card-content">
+            <h3>Fake News & Misinformation</h3>
+            <p>
+             UNICEF (2023), misinformation is false information that spreads, regardless of intent, misleading and undermining trust (University of Victoria Libraries, 2023).
+            </p>
+            <a class="btn btn-outline" href="blogpage_fakenews.html">Learn More</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="image/malware.jpg" alt="Recognize Malware Threats" />
+          <div class="card-content">
+            <h3>Recognize Malware Threats</h3>
+            <p>
+              Norton (2023) defines malware as malicious software that harms devices, including viruses and ransomware. Learn to recognize threats and prevent data theft or disruption (Collaboris, 2023).
+            </p>
+            <a class="btn btn-outline" href="blogpage_malware.html">Learn More</a>
+          </div>
+        </div>
+          
+      </section>
+    </main>
+    
+    <!-- Social Media Links -->
+    <footer class="site-footer">
+      <div class="container">
+        <h2 class="footer-logo"><strong>NetAware</strong></h2>
+      <div class="footer-social">
+      <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-facebook-f"></i> Facebook
+      </a>
+      <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-twitter"></i> Twitter
+      </a>
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-instagram"></i> Instagram
+      </a>
+       <a href="mailto:yourname@gmail.com" >
+        <i class="fas fa-envelope"></i> Email
+    </a>
+    </div>
+        <p>© NetAware 2025. Designed to make you smarter online.</p>
+      </div>
+    </footer>
+
+<!-- Back to Top Button -->
+<button id="backToTop" title="Go to top">↑</button>
+
+  <script src="script.js">
+</script>
+  </body>
+  </html>
+<script>
+  const searchBtn = document.getElementById("heroSearchBtn");
+const searchWrapper = document.querySelector(".search-wrapper");
+
+searchBtn.addEventListener("click", () => {
+  searchWrapper.classList.toggle("active");
+});
+
+
+</script>
+<script src="script.js"></script>
+  </body>
+</html>
