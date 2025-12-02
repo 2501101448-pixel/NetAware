@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" role="img" aria-labelledby="bankDesc">
+  <title id="bankDesc">Staged illustration of a fake bank email warning that the account is locked and asking to click to verify</title>
+
+  <!-- Background -->
+  <rect width="500" height="500" rx="20" fill="#F4F6FB"></rect>
+
+  <!-- Email window -->
+  <g transform="translate(40,55)">
+    <rect width="420" height="310" rx="16" fill="#FFFFFF" stroke="#E6E9F2" stroke-width="2"></rect>
+    <rect x="0" y="0" width="420" height="44" rx="16" ry="16" fill="#F2F4F8"></rect>
+    <circle cx="20" cy="22" r="6" fill="#FF5F56"></circle>
+    <circle cx="44" cy="22" r="6" fill="#FFBD2E"></circle>
+    <circle cx="68" cy="22" r="6" fill="#27C93F"></circle>
+    <text x="96" y="28" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#475569">Inbox</text>
+
+    <!-- Sender row -->
+    <g transform="translate(18,58)">
+      <rect x="0" y="0" width="384" height="44" rx="8" fill="#F8FAFF"></rect>
+      <text x="12" y="28" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#0F1724" font-weight="700">
+        Trusted Bank &lt;no-reply@trustedbank.example&gt;
+      </text>
+      <text x="12" y="40" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#64748B">
+        Important security message
+      </text>
+    </g>
+
+    <!-- Email content -->
+    <g transform="translate(36,130)">
+      <text x="0" y="0" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#111827">
+        Account locked
+      </text>
+      <text x="0" y="26" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#334155">
+        We detected unusual activity and temporarily locked your account.
+      </text>
+      <text x="0" y="46" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#334155">
+        To restore access, please verify your identity by clicking below.
+      </text>
+
+      <!-- Fake verify button -->
+      <rect x="0" y="68" width="200" height="38" rx="8" fill="#EF4444"></rect>
+      <text x="36" y="93" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">
+        Verify Account
+      </text>
+
+      <!-- Disclaimer -->
+      <text x="0" y="126" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#9AA7C7">
+        *Staged example — never click suspicious links or share information.
+      </text>
+    </g>
+  </g>
+
+  <!-- Red warning badge -->
+  <g transform="translate(365,45)">
+    <circle cx="0" cy="0" r="36" fill="#FFEBEB" stroke="#FF7B7B" stroke-width="2"></circle>
+    <polygon points="-7,-10 7,-10 0,8" fill="#FF4D4D"></polygon>
+    <text x="-24" y="52" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#FF4D4D" font-weight="700">
+      SCAM?
+    </text>
+  </g>
+
+  <!-- Footer label -->
+  <rect x="55" y="390" width="390" height="70" rx="8" fill="#FFFFFF" opacity="0.95" stroke="#E6E9F2"></rect>
+  <text x="75" y="418" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#334155">
+    Staged example:
+  </text>
+  <text x="75" y="438" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#334155">
+    fake bank email saying your account is locked and asking to verify.
+  </text>
+</svg>

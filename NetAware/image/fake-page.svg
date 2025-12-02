@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" role="img" aria-labelledby="fbDesc">
+  <title id="fbDesc">Staged illustration of a fake Facebook-style login page used in credential-phishing examples</title>
+
+  <!-- Background -->
+  <rect width="500" height="500" rx="20" fill="#F4F6FB"></rect>
+
+  <!-- Address bar -->
+  <g transform="translate(32,30)">
+    <rect width="436" height="44" rx="10" fill="#FFFFFF" stroke="#E6E9F2" stroke-width="1.2"></rect>
+    <circle cx="18" cy="22" r="6" fill="#FF5F56"></circle>
+    <circle cx="40" cy="22" r="6" fill="#FFBD2E"></circle>
+    <circle cx="62" cy="22" r="6" fill="#27C93F"></circle>
+    <rect x="100" y="12" width="260" height="20" rx="6" fill="#F2F4F8"></rect>
+    <text x="112" y="28" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#334155" aria-hidden="true">https://facebook.example-login</text>
+  </g>
+
+  <!-- Page card -->
+  <g transform="translate(60,100)">
+    <rect width="380" height="300" rx="14" fill="#FFFFFF" stroke="#E6E9F2" stroke-width="1.2"></rect>
+
+    <!-- Top band -->
+    <rect x="0" y="0" width="380" height="78" rx="14" fill="#1877F2"></rect>
+    <circle cx="40" cy="39" r="20" fill="#FFFFFF" opacity="0.95"></circle>
+    <text x="70" y="48" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">SocialBook</text>
+    <text x="46" y="60" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#E1F0FF">staged example</text>
+
+    <!-- Headline -->
+    <text x="32" y="116" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" fill="#111827">
+      Log in to your account
+    </text>
+
+    <!-- Input fields -->
+    <rect x="32" y="134" width="316" height="36" rx="6" fill="#F8FAFF" stroke="#E6E9F2"></rect>
+    <text x="44" y="158" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#94A3B8">Email or phone</text>
+
+    <rect x="32" y="178" width="316" height="36" rx="6" fill="#F8FAFF" stroke="#E6E9F2"></rect>
+    <text x="44" y="202" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#94A3B8">Password</text>
+
+    <!-- Urgent note (shortened) -->
+    <text x="32" y="224" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#334155">
+      Suspicious activity detected — verify to continue.
+    </text>
+
+    <!-- Sign in button -->
+    <rect x="32" y="240" width="140" height="36" rx="8" fill="#1877F2"></rect>
+    <text x="64" y="264" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">Log In</text>
+
+    <!-- Phishy link -->
+    <text x="186" y="262" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#3B82F6">Forgot account?</text>
+
+    <!-- Suspicious domain hint (shortened & moved) -->
+    <text x="32" y="286" font-family="Arial, Helvetica, sans-serif" font-size="10.5" fill="#9AA7C7">
+      Note: staged example — domain may be typo-squatted.
+    </text>
+  </g>
+
+  <!-- Red warning badge -->
+  <g transform="translate(372,72)">
+    <circle cx="0" cy="0" r="34" fill="#FFEBEB" stroke="#FF7B7B" stroke-width="2"></circle>
+    <polygon points="-6,-9 6,-9 0,7" fill="#FF4D4D"></polygon>
+    <text x="-22" y="46" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#FF4D4D" font-weight="700">SCAM?</text>
+  </g>
+
+  <!-- Footer caption (wrapped lines, fits inside canvas) -->
+  <rect x="48" y="408" width="404" height="64" rx="8" fill="#FFFFFF" opacity="0.95" stroke="#E6E9F2"></rect>
+  <text x="68" y="432" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#334155">Staged example: fake Facebook-style login page used</text>
+  <text x="68" y="452" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#334155">in credential-phishing — do not enter real credentials.</text>
+</svg>

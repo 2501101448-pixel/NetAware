@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NetAware | Contact</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"/>
+    <link
+     rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link rel="shortcut icon" href="image/logo.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      section[id] {
+        scroll-margin-top: 100px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="site-header">
+      <div class="container">
+        <a class="logo" href="index.html">NetAware</a>
+        <button class="mobile-menu-button" id="mobileMenuButton">
+          <i class="fas fa-bars"></i>
+       </button>
+        <nav class="main-nav" id="main-nav">
+          <ul>
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="tips.html">Tips</a></li>
+            <li><a href="aware.html">Awareness</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+            <li class="hero-search">
+  <div class="search-wrapper">
+    <input type="text" id="heroSearchInput" placeholder="Search tips or awareness topics..." />
+    <ul id="heroSearchSuggestions" class="search-suggestions"></ul>
+  </div>
+  
+  <button id="heroSearchBtn">
+    <i class="fas fa-search"></i>
+  </button>
+</li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+      <div class="contact-container">
+        <h2>Contact Our Team</h2>
+        <div class="team-members">
+          <div class="member">
+            <img src="image/PR1.jpg" alt="Team member"/>
+            <h4>Chiemel A. Santoile</h4>
+            <p class="p2">Email: ciemalfeche@gmail.com</p>
+            <p class="p2">Phone: 09943187329</p>
+          </div>
+          <div class="member">
+            <img src="image/lawr.png" alt="Team member"/>
+            <h4>Lawrence L. Ebare</h4>
+            <p class="p2">Email: lawrenceebare2@gmail.com</p>
+            <p class="p2">Phone: 09609009322</p>
+          </div>
+          <div class="member">
+            <img src="image/reldon.png" alt="Team member"/>
+            <h4>Reldon loyd S. Sueta</h4>
+            <p class="p2">Email:<br>reldonsueta08@gmail.com</p>
+            <p class="p2">Phone: 09484954679</p>
+          </div>
+          <div class="member">
+            <img src="image/profile_ian.jpg" alt="Team member"/>
+            <h4>Edrian Servanes</h4>
+            <p class="p2">Email: edrianseravanes@gmail.com</p>
+            <p class="p2">Phone: 09397831081</p>
+          </div>
+          <div class="member">
+            <img src="image/criste.jpg" alt="Team member"/>
+            <h4>Joemarie Diaz Criste</h4>
+            <p class="p2">Email: joemariecriste@gmail.com</p>
+            <p class="p2">Phone: 09753589849</p>
+          </div>
+        </div>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+      <div class="contact-container">
+        <h2><i style="color: #00bfff;" class="fas fa-phone"></i> Contact Us</h2>
+        <div class="contact-content">
+          <p style="color: #0b0b20;">
+            Have a question or want to work together? Send me a message!
+          </p>
+
+          <div class="contact-info">
+            <p><i style="color: #00bfff;" class="fas fa-envelope"></i><strong>Email:</strong> NetAware@gmail.com</p>
+            <p><i style="color: #00bfff;" class="fas fa-envelope"></i><strong>Phone:</strong> 09092216599</p>
+            <p><i style="color: #00bfff;" class="fas fa-map-marker-alt"></i><strong>Address:</strong> Malaybalay City, Philippines</p>
+          </div>
+
+          <form class="contact-form">
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <textarea placeholder="Your Message" rows="4" required></textarea>
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <div class="back-btn-container">
+        <a href="index.html" class="btn btn-outline">← Back to Home</a>
+      </div>
+
+    <!-- Social Media Links -->
+    <footer class="site-footer">
+      <div class="container">
+        <h2 class="footer-logo"><strong>NetAware</strong></h2>
+      <div class="footer-social">
+      <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-facebook-f"></i> Facebook
+      </a>
+      <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-twitter"></i> Twitter
+      </a>
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-instagram"></i> Instagram
+      </a>
+       <a href="mailto:yourname@gmail.com" >
+        <i class="fas fa-envelope"></i> Email
+    </a>
+    </div>
+        <p>© NetAware 2025. Designed to make you smarter online.</p>
+      </div>
+    </footer>
+
+<!-- Back to Top Button -->
+<button id="backToTop" title="Go to top">↑</button>
+
+<!-- Your scripts -->
+<script>
+  // Search toggle
+  const searchBtn = document.getElementById("heroSearchBtn");
+  const searchWrapper = document.querySelector(".search-wrapper");
+
+  searchBtn.addEventListener("click", () => {
+    searchWrapper.classList.toggle("active");
+  });
+
+  // Mobile menu toggle
+  const mobileMenuButton = document.getElementById("mobileMenuButton");
+  const mainNav = document.querySelector(".main-nav");
+
+  mobileMenuButton.addEventListener("click", () => {
+    mainNav.classList.toggle("active");
+  });
+
+  const navLinks = document.querySelectorAll(".main-nav ul li a");
+  navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      if (mainNav.classList.contains("active")) {
+        mainNav.classList.remove("active");
+      }
+    });
+  });
+
+  // Back to Top button
+  const backToTop = document.getElementById("backToTop");
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // Optional: show button only when scrolling down
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 200) {
+      backToTop.style.display = "block";
+    } else {
+      backToTop.style.display = "none";
+    }
+  });
+</script>
+<script src="script.js"></script>
+
+</body>
+</html>
