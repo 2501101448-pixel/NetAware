@@ -143,7 +143,7 @@ searchInput.addEventListener("input", function () {
 
   if (filteredTopics.length === 0) {
     const li = document.createElement("li");
-    li.textContent = "No Topic found";
+    li.textContent = "No suggestions found";
     li.style.color = "#999";
     li.style.cursor = "default";
     suggestionsList.appendChild(li);

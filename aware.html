@@ -86,6 +86,8 @@
           </p>
         </div>
       </div>
+    </section>
+
   <!-- Awareness Section -->
     <section class="awareness" id="awareness">
       <div class="container">
@@ -195,47 +197,10 @@
         <p>© NetAware 2025. Protecting your data starts with awareness.</p>
       </div>
     </footer>
+    
    <!-- Back to Top Button -->
 <button id="backToTop" title="Go to top">↑</button>
-
-<!-- Your scripts -->
-<script>
-  // Search toggle
-  const searchBtn = document.getElementById("heroSearchBtn");
-  const searchWrapper = document.querySelector(".search-wrapper");
-
-  // Mobile menu toggle
-  const mobileMenuButton = document.getElementById("mobileMenuButton");
-  const mainNav = document.querySelector(".main-nav");
-
-  mobileMenuButton.addEventListener("click", () => {
-    mainNav.classList.toggle("active");
-  });
-
-  const navLinks = document.querySelectorAll(".main-nav ul li a");
-  navLinks.forEach(link => {
-    link.addEventListener("click", () => {
-      if (mainNav.classList.contains("active")) {
-        mainNav.classList.remove("active");
-      }
-    });
-  });
-
-  // Back to Top button
-  const backToTop = document.getElementById("backToTop");
-  backToTop.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-
-  // Optional: show button only when scrolling down
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 200) {
-      backToTop.style.display = "block";
-    } else {
-      backToTop.style.display = "none";
-    }
-  });
-</script>
-<script src="script2.js"></script>
-</body>
+<script src="script.js"></script>
+  <script src="script2.js"></script>
+  </body>
 </html>
