@@ -1360,3 +1360,9 @@ body {
     padding-right: 10px !important;
   }
 }
+figcaption{
+  font-size: 0.7rem;
+  color: #666;
+  margin-bottom: 8px;
+  text-align: center;
+}
